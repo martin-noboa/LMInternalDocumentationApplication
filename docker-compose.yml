@@ -1,0 +1,15 @@
+# docker-compose.yml
+version: '3'
+
+services:
+  backend:
+    build: .
+    volumes:
+      - ./LMInternalDocDjango:/app/LMInternalDocDjango
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend_service
+    ports:
+      - "3000:3000"
