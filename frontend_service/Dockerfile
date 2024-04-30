@@ -1,16 +1,13 @@
-# frontend/Dockerfile
-
-FROM node:16-alpine
+FROM node:18-alpine
 
 WORKDIR /app
 
 COPY package.json .
-COPY yarn.lock .
 
-RUN yarn install
+RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 8080
 
-CMD ["yarn", "start"]
+CMD [ "npm", "run", "dev" ]
