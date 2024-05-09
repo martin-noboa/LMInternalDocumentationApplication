@@ -11,7 +11,7 @@ class Markdown extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:8000/test/')
+        axios.get('http://localhost:8000/${filename}/')
             .then(res => {
                 const htmlContent = res.data; 
                 console.log('HTML Content:', htmlContent);
