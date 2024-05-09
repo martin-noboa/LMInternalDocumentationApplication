@@ -1,14 +1,14 @@
 import Navbar from './components/Navbar';
-import Markdown from './components/Markdown';
+import BodyGrid from './components/BodyGrid';
 
 function App() {
     return (
     <div>
         <Navbar />
-        <Markdown />
+        <BodyGrid />
     </div>
     );
-}
+} 
 
 
 export default App;

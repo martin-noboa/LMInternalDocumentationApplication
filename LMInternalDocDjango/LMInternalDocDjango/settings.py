@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'lmdocs_service',
     'corsheaders',
+    'lmdocs_service',
     
 ]
 
@@ -133,3 +133,8 @@ REST_FRAMEWORK = {
     } 
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
+    # Add more origins as needed
+]
