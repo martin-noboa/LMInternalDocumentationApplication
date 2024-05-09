@@ -7,7 +7,7 @@ import os
 
 def index(request):
     markdown_content = "# Index"
-    html_content = markdown2.markdown(markdown_content)
+    html_content = markdown.markdown(markdown_content)
     return HttpResponse(html_content)
     #return HttpResponse("Hello, world. You're at the markdown index.")
 
