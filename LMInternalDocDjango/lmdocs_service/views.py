@@ -5,23 +5,15 @@ from rest_framework.response import Response
 import markdown
 import os
 
-def index(request):
-    markdown_content = "# Index"
-    html_content = markdown.markdown(markdown_content)
-    return HttpResponse(html_content)
-    #return HttpResponse("Hello, world. You're at the markdown index.")
-
-
-def test(request):
+def renderMarkdown(request,filename):
     directory_path = os.path.join(
         os.path.dirname(os.path.abspath(__file__)),
         'media',
         'markdown'
     )
-    file_name = "test.md"
 
     # Construct the full path to the requested file
-    file_path = os.path.join(directory_path, file_name)
+    file_path = os.path.join(directory_path, filename)
     if os.path.isfile(file_path):
         # Read the file content
         with open(file_path, 'r') as file:
@@ -31,7 +23,3 @@ def test(request):
     html_content = markdown.markdown(file_content)
     response = HttpResponse(html_content)
     return response
-
-
-def renderMarkdown(request):
-    pass
