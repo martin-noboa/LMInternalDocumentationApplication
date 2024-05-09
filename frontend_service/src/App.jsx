@@ -8,11 +8,11 @@ function App() {
         <Navbar />
         <Router>
         <Switch>
-            <Route path="/file1">
-                <Markdown filename="file1.md" />
+            <Route path="">
+                <Markdown filename="index.md" />
             </Route>
-            <Route path="/file2">
-                <Markdown filename="file2.md" />
+            <Route path="/test">
+                <Markdown filename="test.md" />
             </Route>
         </Switch>
         </Router>
